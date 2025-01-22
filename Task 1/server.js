@@ -1,4 +1,3 @@
-const { timeStamp } = require("console");
 const express = require("express");
 const fs = require("fs");
 const app = express();
@@ -7,7 +6,7 @@ const app = express();
 app.use((req, res, next) => {
     const details = {
         ipaddress: req.ip,
-        time: new Date().toISOString(),
+        time: new Date().toString(),
         url: req.url,
         protocol: req.protocol,
         method: req.method,
